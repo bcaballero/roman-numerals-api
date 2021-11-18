@@ -12,7 +12,7 @@ class RomanController extends Controller
 {
     public function index()
     {
-        return response()->json(Convertion::all(),200);
+        return response()->json(Convertion::list(),200);
     }
 
     public function convert(Request $request)
@@ -31,12 +31,17 @@ class RomanController extends Controller
         $roman_numeral = convert_roman($request->number);
 
         $convertion = Convertion::create([
-            'integer'   => $request->number,
+            'intval'   => $request->number,
             'roman'     => $roman_numeral
         ]);   
         
         return response()->json([
             'roman_numeral' => $convertion->roman
         ], 201);
+    }
+
+    public function top()
+    {
+        return response()->json(Convertion::top(),200);
     }
 }

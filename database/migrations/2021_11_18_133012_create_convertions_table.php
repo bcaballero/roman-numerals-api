@@ -15,7 +15,7 @@ class CreateConvertionsTable extends Migration
     {
         Schema::create('convertions', function (Blueprint $table) {
             $table->id();
-            $table->integer('integer');
+            $table->integer('intval');
             $table->string('roman',10);
             $table->timestamps();
         });

@@ -21,5 +21,5 @@ use App\Http\Controllers\Api\RomanController;
 }); */
 
 Route::get('/list', 'RomanController@index');
-
+Route::get('/top', 'RomanController@top');
 Route::post('/convert', 'RomanController@convert');
