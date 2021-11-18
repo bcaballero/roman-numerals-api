@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\RomanController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/* Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
+
+Route::get('/list', 'RomanController@index');
+
+/*Route::post('convert', function(Request $request) {
+    // return Article::create($request->all);
+});*/
