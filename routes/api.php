@@ -22,6 +22,4 @@ use App\Http\Controllers\Api\RomanController;
 
 Route::get('/list', 'RomanController@index');
 
-/*Route::post('convert', function(Request $request) {
-    // return Article::create($request->all);
-});*/
+Route::post('/convert', 'RomanController@convert');
