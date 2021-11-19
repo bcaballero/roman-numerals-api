@@ -43,5 +43,9 @@ class RomanNumeralTest extends TestCase
         $this->assertEquals('MMMCMXCIX', $this->converter->convertInteger(3999));
         $this->assertEquals('MMXVI', $this->converter->convertInteger(2016));
         $this->assertEquals('MMXVIII', $this->converter->convertInteger(2018));
+        
+        $this->assertEquals('MMMM', $this->converter->convertInteger(4000));
+        $this->assertEquals('', $this->converter->convertInteger(0));
+        $this->assertEquals('', $this->converter->convertInteger(-1));
     }
 }
